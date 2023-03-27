@@ -2911,7 +2911,7 @@ for(var i = 0, k = 0, l = gdjs.GameCode.GDbutton_95sxObjects1.length;i<l;++i) {
 }
 gdjs.GameCode.GDbutton_95sxObjects1.length = k;}if (gdjs.GameCode.condition0IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.removeTimer(runtimeScene, "kill roxy");
-}{runtimeScene.getGame().getVariables().getFromIndex(10).setNumber(0);
+}{runtimeScene.getGame().getVariables().getFromIndex(10).setNumber(gdjs.randomInRange(0, 1));
 }}
 
 }
@@ -2995,15 +2995,44 @@ gdjs.GameCode.eventsList32(runtimeScene);} //End of subevents
 
 gdjs.GameCode.condition0IsTrue_0.val = false;
 gdjs.GameCode.condition1IsTrue_0.val = false;
+gdjs.GameCode.condition2IsTrue_0.val = false;
 {
-gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "kill roxy") >= 4;
+{gdjs.GameCode.conditionTrue_1 = gdjs.GameCode.condition0IsTrue_0;
+gdjs.GameCode.condition0IsTrue_1.val = false;
+gdjs.GameCode.condition1IsTrue_1.val = false;
+gdjs.GameCode.condition2IsTrue_1.val = false;
+{
+gdjs.GameCode.condition0IsTrue_1.val = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "kill roxy") >= 25;
+if( gdjs.GameCode.condition0IsTrue_1.val ) {
+    gdjs.GameCode.conditionTrue_1.val = true;
+}
+}
+{
+gdjs.GameCode.condition1IsTrue_1.val = gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(1)) == "2A";
+if( gdjs.GameCode.condition1IsTrue_1.val ) {
+    gdjs.GameCode.conditionTrue_1.val = true;
+}
+}
+{
+gdjs.GameCode.condition2IsTrue_1.val = gdjs.evtTools.variable.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(1)) == "1C";
+if( gdjs.GameCode.condition2IsTrue_1.val ) {
+    gdjs.GameCode.conditionTrue_1.val = true;
+}
+}
+{
+}
+}
 }if ( gdjs.GameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.GameCode.conditionTrue_1 = gdjs.GameCode.condition1IsTrue_0;
-gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8535524);
+gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8847964);
 }
+}if ( gdjs.GameCode.condition1IsTrue_0.val ) {
+{
+gdjs.GameCode.condition2IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(10)) >= 3;
 }}
-if (gdjs.GameCode.condition1IsTrue_0.val) {
+}
+if (gdjs.GameCode.condition2IsTrue_0.val) {
 
 { //Subevents
 gdjs.GameCode.eventsList33(runtimeScene);} //End of subevents
