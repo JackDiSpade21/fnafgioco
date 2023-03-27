@@ -2881,6 +2881,8 @@ gdjs.copyArray(runtimeScene.getObjects("fan"), gdjs.GameCode.GDfanObjects2);
     gdjs.GameCode.GDDoor_95DXObjects2[i].deleteFromScene(runtimeScene);
 }
 }{gdjs.evtTools.camera.hideLayer(runtimeScene, "ui");
+}{gdjs.evtTools.camera.hideLayer(runtimeScene, "monitor");
+}{gdjs.evtTools.camera.hideLayer(runtimeScene, "monitor anim");
 }{for(var i = 0, len = gdjs.GameCode.GDbackgroundObjects2.length ;i < len;++i) {
     gdjs.GameCode.GDbackgroundObjects2[i].setAnimationName("jump_roxy");
 }
@@ -2996,8 +2998,12 @@ gdjs.GameCode.eventsList32(runtimeScene);} //End of subevents
 gdjs.GameCode.condition0IsTrue_0.val = false;
 gdjs.GameCode.condition1IsTrue_0.val = false;
 gdjs.GameCode.condition2IsTrue_0.val = false;
+gdjs.GameCode.condition3IsTrue_0.val = false;
 {
-{gdjs.GameCode.conditionTrue_1 = gdjs.GameCode.condition0IsTrue_0;
+gdjs.GameCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "kill roxy") >= 5;
+}if ( gdjs.GameCode.condition0IsTrue_0.val ) {
+{
+{gdjs.GameCode.conditionTrue_1 = gdjs.GameCode.condition1IsTrue_0;
 gdjs.GameCode.condition0IsTrue_1.val = false;
 gdjs.GameCode.condition1IsTrue_1.val = false;
 gdjs.GameCode.condition2IsTrue_1.val = false;
@@ -3022,17 +3028,18 @@ if( gdjs.GameCode.condition2IsTrue_1.val ) {
 {
 }
 }
-}if ( gdjs.GameCode.condition0IsTrue_0.val ) {
-{
-{gdjs.GameCode.conditionTrue_1 = gdjs.GameCode.condition1IsTrue_0;
-gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8847964);
-}
 }if ( gdjs.GameCode.condition1IsTrue_0.val ) {
 {
-gdjs.GameCode.condition2IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(10)) >= 3;
+{gdjs.GameCode.conditionTrue_1 = gdjs.GameCode.condition2IsTrue_0;
+gdjs.GameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(8847964);
+}
+}if ( gdjs.GameCode.condition2IsTrue_0.val ) {
+{
+gdjs.GameCode.condition3IsTrue_0.val = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(10)) >= 3;
 }}
 }
-if (gdjs.GameCode.condition2IsTrue_0.val) {
+}
+if (gdjs.GameCode.condition3IsTrue_0.val) {
 
 { //Subevents
 gdjs.GameCode.eventsList33(runtimeScene);} //End of subevents
@@ -4353,7 +4360,7 @@ if (gdjs.GameCode.condition1IsTrue_0.val) {
 
 
 };gdjs.GameCode.asyncCallback10235364 = function (runtimeScene, asyncObjectsList) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Game", false);
+{gdjs.evtsExt__URLTools__Reload.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 gdjs.GameCode.eventsList44 = function(runtimeScene) {
 
