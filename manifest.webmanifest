@@ -1,7 +1,7 @@
 {
-  "name": "Fnaf Mod",
-  "short_name": "Fnaf Mod",
-  "id": "com.example.gamename",
+  "name": "Five Nights at Freddy's",
+  "short_name": "Five Nights at Freddy's",
+  "id": "it.doublea.fnafremake",
   "description": "",
   "orientation": "landscape",
   "start_url": "./index.html",
