@@ -7,15 +7,13 @@ if (typeof gdjs.evtsExt__FPS__FPS !== "undefined") {
 
 gdjs.evtsExt__FPS__FPS = {};
 
-gdjs.evtsExt__FPS__FPS.conditionTrue_0 = {val:false};
-gdjs.evtsExt__FPS__FPS.condition0IsTrue_0 = {val:false};
-
 
 gdjs.evtsExt__FPS__FPS.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
+let isConditionTrue_0 = false;
 {
 {if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = Math.ceil(1 / gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)); }}}
 

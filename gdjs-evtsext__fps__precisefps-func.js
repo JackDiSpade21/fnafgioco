@@ -7,15 +7,13 @@ if (typeof gdjs.evtsExt__FPS__PreciseFPS !== "undefined") {
 
 gdjs.evtsExt__FPS__PreciseFPS = {};
 
-gdjs.evtsExt__FPS__PreciseFPS.conditionTrue_0 = {val:false};
-gdjs.evtsExt__FPS__PreciseFPS.condition0IsTrue_0 = {val:false};
-
 
 gdjs.evtsExt__FPS__PreciseFPS.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
+let isConditionTrue_0 = false;
 {
 {if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = (Math.ceil(1 / gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene) * ((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("accuracy")) || 0 : 0) * 10))) / ((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("accuracy")) || 0 : 0) * 10); }}}
 
